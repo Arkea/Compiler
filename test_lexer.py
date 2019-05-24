@@ -1,12 +1,14 @@
 from sly import Lexer
 
+
 class IniLexer(Lexer):
-    tokens = { NAME, NUMBER, STRING, IF, THEN, ELSE, FOR, FUN, TO, ARROW, EQEQ }
+    tokens = {PRINT, NAME, NUMBER, STRING, IF, THEN, ELSE, FOR, FUN, TO, ARROW, EQEQ}
     ignore = '\t '
 
-    literals = { '=', '+', '-', '/', '*', '(', ')', ',', ';' }
+    literals = {'=', '+', '-', '/', '*', '(', ')', ',', ';'}
 
     # Define tokens
+    PRINT = r'PRINT'
     IF = r'IF'
     THEN = r'THEN'
     ELSE = r'ELSE'
@@ -29,20 +31,20 @@ class IniLexer(Lexer):
         pass
 
     @_(r'\n+')
-    def newline(self,t ):
+    def newline(self, t):
         self.lineno = t.value.count('\n')
 
 
 # Biar bisa di eksekusi
-# if __name__ == '__main__':
-#     lexer = BasicLexer()
-#     env = {}
-#     while True:
-#         try:
-#             text = input('test > ')
-#         except EOFError:
-#             break
-#         if text:
-#             lex = lexer.tokenize(text)
-#             for token in lex:
-#                 print(token)
+if __name__ == '__main__':
+    lexer = IniLexer()
+    env = {}
+    while True:
+        try:
+            text = input('test > ')
+        except EOFError:
+            break
+        if text:
+            lex = lexer.tokenize(text)
+            for token in lex:
+                print(token)

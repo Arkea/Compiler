@@ -1,17 +1,19 @@
 from sly import Parser
-import test_lexer
+from test_lexer import IniLexer
+
 
 class IniParser(Parser):
-    tokens = test_lexer.IniLexer.tokens
+    tokens = IniLexer.tokens
 
     precedence = (
         ('left', '+', '-'),
         ('left', '*', '/'),
         ('right', 'UMINUS'),
-        )
+    )
 
     def __init__(self):
-        self.env = { }
+        self.env = {}
+
     @_('')
     def statement(self, p):
         pass
@@ -80,16 +82,24 @@ class IniParser(Parser):
     def expr(self, p):
         return ('num', p.NUMBER)
 
+    @_('PRINT expr')
+    def statement(self, p):
+        return ('print', p.expr)
+
+    @_('PRINT STRING')
+    def statement(self, p):
+        return ('print', p.STRING)
+
 # Biar bisa di eksekusi
-# if __name__ == '__main__':
-#     lexer = test_lexer.IniLexer()
-#     parser = IniParser()
-#     env = {}
-#     while True:
-#         try:
-#             text = input('test > ')
-#         except EOFError:
-#             break
-#         if text:
-#             tree = parser.parse(lexer.tokenize(text))
-#             print(tree)
+if __name__ == '__main__':
+    lexer = IniLexer()
+    parser = IniParser()
+    env = {}
+    while True:
+        try:
+            text = input('test > ')
+        except EOFError:
+            break
+        if text:
+            tree = parser.parse(lexer.tokenize(text))
+            print(tree)

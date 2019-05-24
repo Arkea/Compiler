@@ -1,0 +1,6 @@
+a=1
+b=2
+a+b
+PRINT a
+PRINT b
+PRINT "HELLO, WORLD!"
