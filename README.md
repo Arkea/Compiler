@@ -45,6 +45,7 @@ python lng.py ini.text
 ___Wait... it use ".text" extention?___
 
 Nope, it doesn't have to ".text", it could whatever you want to!! _~~even file without extention~~_.
+
 What? Don't belive me? Suit yourself...
 
 # Documentation
@@ -192,6 +193,7 @@ wat()
 ...there, thats it all it can do.
 
 ___why are you made this?___
+
 To ~~get gud grade~~ fullfil class final project.
 
 # About
