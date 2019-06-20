@@ -8,12 +8,12 @@ class IniLexer(Lexer):
     literals = {'=', '+', '-', '/', '*', '(', ')', ',', ';'}
 
     # Define tokens
-    PRINT = r'PRINT'
-    IF = r'IF'
-    THEN = r'THEN'
-    ELSE = r'ELSE'
-    FOR = r'FOR'
-    FUN = r'FUN'
+    PRINT = r'P'
+    IF = r'I'
+    THEN = r'TH'
+    ELSE = r'E'
+    FUN = r'FN'
+    FOR = r'F'
     TO = r'TO'
     ARROW = r'->'
     NAME = r'[a-zA-Z_][a-zA-Z0-9_]*'

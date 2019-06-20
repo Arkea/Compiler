@@ -1,5 +1,5 @@
-from test_lexer import IniLexer
-from test_parser import IniParser
+from lng_lexer import IniLexer
+from lng_parser import IniParser
 
 class IniExecute:
 
@@ -34,12 +34,6 @@ class IniExecute:
         if node[0] == 'str':
             return node[1]
 
-        if node[0] == 'print':
-            if node[1][0] == '"':
-                print(node[1][1:len(node[1])-1])
-            else:
-                return self.walkTree(node[1])
-
         if node[0] == 'if_stmt':
             result = self.walkTree(node[1])
             if result:
@@ -66,19 +60,7 @@ class IniExecute:
         elif node[0] == 'mul':
             return self.walkTree(node[1]) * self.walkTree(node[2])
         elif node[0] == 'div':
-            a = self.walkTree(node[1])
-            b = self.walkTree(node[2])
-            c = 0
-            while True:
-                c += 1
-                d = b*c
-                if d == a:
-                    break
-                elif d > a:
-                    c -= 1
-                    break
-                pass
-            return c
+            return int(self.walkTree(node[1]) / self.walkTree(node[2]))
 
         if node[0] == 'var_assign':
             self.env[node[1]] = self.walkTree(node[2])
@@ -107,6 +89,12 @@ class IniExecute:
 
         if node[0] == 'for_loop_setup':
             return (self.walkTree(node[1]), self.walkTree(node[2]))
+
+        if node[0] == 'print':
+            if node[1][0] == '"':
+                print(node[1][1:len(node[1])-1])
+            else:
+                return self.walkTree(node[1])
 
 
 # Biar bisa di eksekusi

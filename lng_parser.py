@@ -1,5 +1,5 @@
 from sly import Parser
-from test_lexer import IniLexer
+from lng_lexer import IniLexer
 
 
 class IniParser(Parser):
