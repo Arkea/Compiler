@@ -1,15 +1,25 @@
 ## UwU Wat is dis?
 Lng Language.
+
 ___wha...___
+
 An esolang.
+
 ___what kind?___
+
 Shorter syntax one.
+
 ___....___
+
 This thing are using SLY so its need python 3.6 or greater.
 As how to install SLY itself, just type ```pip install sly``` on your terminal/cmd
+
 ___...ok. What this thing could do?___
+
 Just like ~~my friends~~ similar esolang, this one could print, do calculation (only in INTEGER. I REPEAT. ONLY IN INTEGER ~~FAILED TO DO SO WOULD CAUSE YOUR PC TO BLUESCREEN!! jk~~), assign variabel, for loop, comment the code, and create a function using those command above.
+
 ___I see... then, how do I run it?___
+
 Easy way... just run it!
 
 Or, follow dis steps if you don't know what to do:
@@ -33,6 +43,7 @@ python lng.py ini.text
 ```
 
 ___Wait... it use ".text" extention?___
+
 Nope, it doesn't have to ".text", it could whatever you want to!! _~~even file without extention~~_.
 What? Don't belive me? Suit yourself...
 
