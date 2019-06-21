@@ -16,7 +16,7 @@ As how to install SLY itself, just type ```pip install sly``` on your terminal/c
 
 ___...ok. What this thing could do?___
 
-Just like ~~my friends~~ similar esolang, this one could print, do calculation (only in INTEGER. I REPEAT. ONLY IN INTEGER ~~FAILED TO DO SO WOULD CAUSE YOUR PC TO BLUESCREEN!! jk~~), assign variabel, for loop, comment the code, and create a function using those command above.
+Just like ~~my friends~~ similar esolang, this one could print, do calculation (only in REAL INTEGER. I REPEAT. ONLY IN REAL INTEGER ~~FAILED TO DO SO WOULD CAUSE YOUR PC TO BLUESCREEN!! jk~~), assign variabel, for loop, comment the code, and create a function using those command above.
 
 ___I see... then, how do I run it?___
 
@@ -88,10 +88,10 @@ P a
 ```
 a=3
 b=2
-TNIRP a+b
-TNIRP a-b
-TNIRP a*b
-TNIRP a/b
+P a+b
+P a-b
+P a*b
+P a/b
 ```
 **result**
 ```
@@ -102,7 +102,7 @@ TNIRP a/b
 ```
 
 ___shouldn't 3 divided by 2 equals 1.5??___
-LIKE I SAID BEFORE, THIS THING CAN __DO CALCULATION ON INTEGER ONLY__ SO PLEASE EXPECT ITS OUTPUT TO BE __INTEGER__
+LIKE I SAID BEFORE, THIS THING CAN __DO CALCULATION ON REAL INTEGER ONLY__ SO PLEASE EXPECT ITS OUTPUT TO BE __INTEGER__
 
 ### If else 
 ```
