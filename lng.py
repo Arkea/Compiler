@@ -16,7 +16,7 @@ if __name__ == '__main__':
     else:
         while True:
             try:
-                text = input('test > ')
+                text = input('lng > ')
             except EOFError:
                 break
             if text:

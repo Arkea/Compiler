@@ -1,0 +1,10 @@
+P "HelloWorld!!"
+1+2
+4-3
+3*1
+4/2
+a=4
+I a==4 TH P "aye" E P "nay"
+F i=0 TO a TH P i
+FN yay() -> P "louder"
+yay()

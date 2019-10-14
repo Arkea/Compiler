@@ -23,8 +23,8 @@ ___I see... then, how do I run it?___
 Easy way... just run it!
 
 Or, follow dis steps if you don't know what to do:
-1. Open ye terminal/cmd.
-2. Change the dir to where ya extract dis lang.
+1. Open your terminal/cmd.
+2. Change the directory to where you extract this language.
 3. run the lng.py.
 4. ....
 5. PROFIT???
@@ -61,7 +61,7 @@ HelloWorld!!
 ```
 **or:**
 ```
-a= "Hello World!!"
+a = "Hello World!!"
 P a
 ```
 **result**
@@ -127,7 +127,7 @@ F expr TO expr TH stmt
 
 **ex:**
 ```
-F i=0 T 5 TH P i
+F i=0 TO 5 TH P i
 ```
 **result**
 ```
